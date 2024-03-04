@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simpal calculater</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            /* border: 1px solid black; */
+        }
+        .box{
+            display: flex;
+            flex-direction: row;
+            /* height: 80px; */
+            /* width: 25%; */
+            gap: 30px;
+        }
+        .main{
+            width: 40%;
+            height: 250px;
+        }
+        .ser{
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+        }
+        .uk{
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+        }
+        button{
+            height: 50px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="ser">
+            <div class="edf">user1</div>
+            <input type="text">
+        </div>
+        <div class="uk">
+            <div class="edf">user2</div>
+            <input type="text">
+        </div>
+            <div class="box">
+                <div class="box1" onclick=" Addition(a+b)" ><button>Add</button></div>
+                <div class="box2" onclick=" subtraction()"><button>Sub</button></div>
+                <div class="box3" onclick="  multiplya()"><button>multiplya</button></div>
+                <div class="box4" onclick="divied()"><button>divied</button></div>
+            </div>
+    </div>
+    <script>
+        let a = document.getElementById("input-1")
+        let b = document.getElementById("input-2")
+        function Addition(a,b) {
+            console.log('+');  
+        }
+        Addition(a+b);
+
+        function subtraction() {
+            console.log('-');
+        }
+        subtraction();
+
+        function multiplya() {
+            console.log('*');
+        }
+        multiplya();
+
+        function divied() {
+            console.log('/');
+        }
+        divied();
+    </script>
+</body>
+
+</html>
