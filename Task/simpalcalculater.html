@@ -1,84 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simpal calculater</title>
     <style>
         *{
             margin: 0;
             padding: 0;
-            /* border: 1px solid black; */
+            box-sizing: border-box;
+            border: 1px solid black;
         }
-        .box{
+        body{
             display: flex;
-            flex-direction: row;
-            /* height: 80px; */
-            /* width: 25%; */
-            gap: 30px;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
         }
-        .main{
-            width: 40%;
-            height: 250px;
-        }
-        .ser{
+        .container{
             display: flex;
-            flex-direction: row;
-            gap: 25px;
+            justify-content: space-around;
+            height: 300px;
+            width: 400px;
+            background-color: black;
+            color: white;
         }
-        .uk{
+        .container-1{
             display: flex;
-            flex-direction: row;
-            gap: 25px;
+            flex-direction: column;
+
         }
+        div [class*="box"]{
+            height: 40px;
+            width: 100px;
+        }
+        input{
+            height: 40px;
+            width: 120px;
+        }
+        .box-1{
+            margin-bottom: 20px;
+        }
+
         button{
+            height: 20px;
+            width: 70px;
+        }
+        #input-1{
+            margin-bottom: 20px;
+        }
+        .container-2{
             height: 50px;
+            width: 400px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: green;
         }
-
+        button:hover{
+            cursor: pointer;
+        }
     </style>
+    <title>Document</title>
 </head>
-
 <body>
-    <div class="main">
-        <div class="ser">
-            <div class="edf">user1</div>
-            <input type="text">
-        </div>
-        <div class="uk">
-            <div class="edf">user2</div>
-            <input type="text">
-        </div>
-            <div class="box">
-                <div class="box1" onclick=" Addition(a+b)" ><button>Add</button></div>
-                <div class="box2" onclick=" subtraction()"><button>Sub</button></div>
-                <div class="box3" onclick="  multiplya()"><button>multiplya</button></div>
-                <div class="box4" onclick="divied()"><button>divied</button></div>
-            </div>
+    <div class="container">
+        <div class="container-1">
+    <div class="box-1">Enter value 1</div>
+    <div class="box-2">Enter value 2</div>
     </div>
-    <script>
-        let a = document.getElementById("input-1")
-        let b = document.getElementById("input-2")
-        function Addition(a,b) {
-            console.log('+');  
-        }
-        Addition(a+b);
+    <div class="container-1">
+    <input type="number" id="input-1">
+    <input type="number" id="input-2">
+</div>
 
-        function subtraction() {
-            console.log('-');
-        }
-        subtraction();
+</div>
+<div class="container-2">
+<button onclick="addition()">Add</button>
+<button onclick="subtract()">Substract</button>
+<button onclick="multiply()">Multiply</button>
+<button onclick="divide()">Divide</button>
+</div>
+<script>
 
-        function multiplya() {
-            console.log('*');
+function addition() {
+            let a = parseInt(document.getElementById('input-1').value);
+            let b = parseInt(document.getElementById('input-2').value);
+            console.log(a + b);
         }
-        multiplya();
 
-        function divied() {
-            console.log('/');
+        function multiply() {
+            let a = parseInt(document.getElementById('input-1').value);
+            let b = parseInt(document.getElementById('input-2').value);
+            console.log(a * b);
         }
-        divied();
-    </script>
+
+        function divide() {
+            let a = parseInt(document.getElementById('input-1').value);
+            let b = parseInt(document.getElementById('input-2').value);
+            console.log(a / b);
+        }
+
+        function subtract() {
+            let a = parseInt(document.getElementById('input-1').value);
+            let b = parseInt(document.getElementById('input-2').value);
+            console.log(a - b);
+        }
+    
+   
+</script>
 </body>
-
 </html>

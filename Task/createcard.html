@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create cards</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* border: 2px solid black; */
+        }
+        .box{
+            width: 250px;
+            margin: 10px;
+            box-shadow: 5px 5px 5px 5px black;
+        }
+        button{
+            padding: 5px 10px;
+            font-size: 18px;
+            font-weight: 500;
+            margin: 5px;
+        }
+        p{
+            color: rgb(203, 203, 221);
+            /* margin: 5px; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="../Image/t-shirt.webp" alt="" width="250px" height="300px">
+        <br>
+      <h3>  Mast & Harbour</h3>
+        <button onclick="create()"><span><i class="fa-regular fa-heart"></i></span>Wish list</button>
+        <p>size 42</p>
+        <h4>Rs. 536</h4>
+    </div>
+    <script>
+        function create() {
+            let a = document.createElement('div');
+            a.classList.add('box');
+            a.innerHTML = `  <img src="../Image/t-shirt.webp" alt="" width="250px" height="300px">
+        <br>
+      <h3>  Mast & Harbour</h3>
+        <button onclick="create()"><span><i class="fa-regular fa-heart"></i></span>Wish list</button>
+        <p>size 42</p>
+        <h4>Rs. 536</h4>`
+            a.appendChild(a);
+            document.getElementsByClassName('box').appendChild(a);
+        }
+    </script>
+</body>
+
+</html>
