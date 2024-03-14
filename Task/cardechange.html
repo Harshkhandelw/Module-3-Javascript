@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card Cahange</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .contaner{
+            width: 90%;
+            margin: 0 auto;
+            background-color: blue;
+        }
+        #row{
+            display:flex ;
+            flex-wrap: wrap;
+        }
+        img{
+            width: 250px;
+            height: 250px;
+        }
+        .col-25{
+            width: 25%;
+            text-align: center;
+        }
+        .card{
+            background-color: brown;
+            color: white;
+            margin: 10px;
+        }
+        h2{
+            padding: 10px 0px;
+            font-size: 30px;
+        }
+        p{
+            padding-bottom: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contaner">
+        <div id="row">
+            <!-- <div class="col-25"> -->
+                <!-- <div class="card">
+                    <div class="shoes-img">
+                        <img src="../Image/puma1.jpg" alt="">
+                    </div>
+                    <h2>Puma Shoes</h2>
+                    <p>Rs 1699 <del>4999</del></p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let arr =[
+            `<h2>Puma Shoes</h2>
+                    <p>Rs 1699 <del>4999</del></p>`,
+                    `<h2>Puma snikers</h2>
+                    <p>Rs 1899 <del>6999</del></p>`,
+                    `<h2>Puma casual</h2>
+                    <p>Rs 1999 <del>8999</del></p>`,
+                    `<h2>Puma Sport</h2>
+                    <p>Rs 2499 <del>9999</del></p>`     
+        ]
+        function change() {
+        arr.forEach(element => {
+                let node = document.createElement("div");
+                node.setAttribute("class","col-25");
+                let text = `<div class="card">
+                    <div class="shoes-img">
+                        <img src="../Image/puma1.jpg" alt="">
+                    </div>
+                    <h2>${element}</h2>
+                    <p>${element}</p>
+                </div>`;
+                node.innerHTML = text;
+                document.getElementById("row").appendChild(node);
+            });
+        }
+        change()
+    </script>
+</body>
+</html>
